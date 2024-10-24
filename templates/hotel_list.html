@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>List of Hotels</title>
+    <title>List of {{ entity_name }}</title>
 </head>
 <body>
-    <h1>List of Hotels</h1>
+    <h1>List of {{ entity_name }}</h1>
     <ul>
-        {% for hotel in hotels %}
+        {% for entity in entities %}
         <li>
-            <strong>{{ hotel.name }}</strong><br>
-            Address: {{ hotel.adress }}<br>
-            City: {{ hotel.city }}<br>
-            Country: {{ hotel.country }}<br>
-            Star Rating: {{ hotel.star_rating }}
+            <strong>{{ entity.name }}</strong><br>
+            Address: {{ entity.address }}<br>
+            City: {{ entity.city }}<br>
+            Country: {{ entity.country }}<br>
+            Star Rating: {{ entity.star_rating }}
         </li>
         {% endfor %}
     </ul>

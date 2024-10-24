@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+
+from api import views
 from api.views import HotelViewSet, hotel_list
 
 # router = DefaultRouter()
@@ -26,5 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include(router.urls)),
     path('hotels/', hotel_list, name='hotel-list'),
+    path('hotels/<int:hotel_id>/', views.hotel_detail, name='hotel_detail'),
+    path('hotels/add/', views.add_hotel, name='add_hotel'),
 
 ]
