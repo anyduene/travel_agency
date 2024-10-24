@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Hotels</title>
+</head>
+<body>
+    <h1>List of Hotels</h1>
+    <ul>
+        {% for hotel in hotels %}
+        <li>
+            <strong>{{ hotel.name }}</strong><br>
+            Address: {{ hotel.adress }}<br>
+            City: {{ hotel.city }}<br>
+            Country: {{ hotel.country }}<br>
+            Star Rating: {{ hotel.star_rating }}
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
